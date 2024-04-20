@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidCalc</title>
+  <link rel="stylesheet" href="assets/style.css" class="theme-style">
+
+</head>
+
+<body>
+  <div class="header">
+    <h1>
+      KidCalculator
+    </h1>
+    <p>Help your kid in learning maths</p>
+    <nav class="navbar">
+      <a href="">X</a>
+      <a href="">Instagram</a>
+      <a href="">Facebook</a>
+      <a href="#" class="right">Contact</a>
+      <a href="index.html" class="right">Logout</a>
+    </nav>
+  </div>
+  <div class="info-bar">
+    <p>Welcome to the Kid Calculator</p>
+    <p>Score : 0</p>
+  </div>
+  <table class="calculator">
+    <tr>
+      <td colspan="3"> <input class="display-box" type="text" id="result" disabled> </td>
+
+      <td> <input type="button" value="C" class="btn" > </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="1" class="but"> </td>
+      <td> <input type="button" value="2" class="but"></td>
+      <td> <input type="button" value="3" class="but"> </td>
+      <td> <input type="button" value="+" class="but"> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="4" class="but"> </td>
+      <td> <input type="button" value="5" class="but"> </td>
+      <td> <input type="button" value="6" class="but"> </td>
+      <td> <input type="button" value="-" class="but"> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="7" class="but"> </td>
+      <td> <input type="button" value="8" class="but"> </td>
+      <td> <input type="button" value="9" class="but"> </td>
+      <td> <input type="button" value=">" class="but"> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="=" class="but">  </td>
+      <td> <input type="button" value="0" class="but"> </td>
+      <td> <input type="button" value="<" class="but"> </td>
+      <td> <input type="button" value="submit" class="btn"> </td>
+
+    </tr>
+  </table>
+  <script>
+    const selectedTheme = localStorage.getItem('selectedTheme');
+    if (selectedTheme) {
+      document.querySelector('.theme-style').setAttribute('href', 'assets/' + selectedTheme + '-theme.css');
+    }
+  </script>
+</body>
+
+</html>
